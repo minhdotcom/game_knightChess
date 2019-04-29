@@ -16,7 +16,7 @@ function checkProperMove (knightX, knightY) {
                    (Math.abs(knightX - tempKnightX) === 1 && Math.abs(knightY - tempKnightY) === 2)) ) {
         showMessage(turn + "'s turn: Quân mã chỉ được đi theo hình chữ L 2x1.");
         } else if (step[knightX][knightY] === "x") {
-            showMessage() (turn + "'s turn. Bạn không được đi vào những ô đã đi rồi.")
+            showMessage(turn + "'s turn. Bạn không được đi vào những ô đã đi rồi.");
             } else return true;
 }
 
