@@ -57,7 +57,6 @@ function showMessage (string) {
 }
 
 function autoMove (knightX, knightY) {
-    // strategy is to move in 2 x 4 blocks
     let blockX = (knightX % 2);
     let blockY = (knightY % 4);
     knight.x = (blockX === 0) ? 1 : 0;
@@ -71,7 +70,7 @@ function disableEvent(event){
     event.preventDefault();
 }
 
-showMessage(turn + "'s. Lets start by placing a knight where you'd like.")
+showMessage(turn + "'s turn. MỜi bạn bắt đầu cuộc chơi.")
 document.onclick = function (event) {
     if (turn == "Computer") {
         autoMove(knight.x, knight.y);
@@ -89,7 +88,7 @@ document.onclick = function (event) {
             switchTurn();
             if (turn == "Player") {
                 showMessage(turn + "'s turn");
-            } else showMessage(turn + "'s turn. Click anywhere to make it move.")
+            } else showMessage(turn + "'s turn. Nhấp chuột bất kỳ đâu để comp đi.")
         }
     }
 };
