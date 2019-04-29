@@ -70,7 +70,7 @@ function disableEvent(event){
     event.preventDefault();
 }
 
-showMessage(turn + "'s turn. MỜi bạn bắt đầu cuộc chơi.")
+showMessage(turn + "'s turn. Mời bạn bắt đầu cuộc chơi.")
 document.onclick = function (event) {
     if (turn == "Computer") {
         autoMove(knight.x, knight.y);
