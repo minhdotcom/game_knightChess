@@ -56,11 +56,6 @@ function showMessage (string) {
     CTX2.closePath();
 }
 
-function disableEvent(event){
-    event.stopPropagation();
-    event.preventDefault();
-}
-
 function autoMove (knightX, knightY) {
     // strategy is to move in 2 x 4 blocks
     let blockX = (knightX % 2);
@@ -69,6 +64,11 @@ function autoMove (knightX, knightY) {
     knight.y = (blockY + 2 > 3) ? blockY -2 : blockY + 2;
     knight.x = knight.x + Math.floor(knightX / 2) * 2;
     knight.y = knight.y + Math.floor(knightY / 4) * 4;
+}
+
+function disableEvent(event){
+    event.stopPropagation();
+    event.preventDefault();
 }
 
 showMessage(turn + "'s. Lets start by placing a knight where you'd like.")
